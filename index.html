@@ -1,95 +1,211 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback App – Csapatbemutató</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Feedback App – Csapatbemutató</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="hero">
-    <img src="assets/logo.png" alt="Feedback App logó" class="logo">
-    <h1 class="team-name">Feedback App Team</h1>
-    <p class="intro">Egy innovatív megoldás a tanulási folyamat fejlesztésére – startup lelkesedéssel, profi kivitelezéssel.</p>
-  </section>
+<section id="hero">
+    <img src="logo.png" alt="BackToTheFeatures logó" class="logo">
+    <h1 class="team-name">Back To The Features</h1>
+    <p class="intro">Feedback App - Tanulástámogató platform</p>
+</section>
 
-  <section id="team">
-    <h2>Ismerd meg a csapatot</h2>
+<section id="team">
+    <h2>Csapattagok</h2>
     <div class="team-cards">
-      <div class="card">
-        <h3>Vári Sándor</h3>
-        <p>Full Stack fejlesztő – backend fókusz, adatbázis és szerverlogika specialistája.</p>
-      </div>
-      <div class="card">
-        <h3>Illés Zsolt</h3>
-        <p>Frontend fejlesztő – modern felhasználói élmények és dizájnfejlesztés.</p>
-      </div>
-      <div class="card">
-        <h3>Erszényné Albert Katalin</h3>
-        <p>Projektkoordinátor – csapatmunka, tervezés és sprint célok összefogása.</p>
-      </div>
+        <div class="card">
+            <h3>Illés Zsolt</h3>
+        </div>
+        <div class="card">
+            <h3>Vári Sándor</h3>
+        </div>
+        <div class="card">
+            <h3>Erszényné Albert Katalin</h3>
+        </div>
     </div>
-  </section>
+</section>
+<section id="features">
+<title>Feedback App Kártyák</title>
+<style>
+    body {
+        font-family: sans-serif;
+        background: #f9f9f9;
+        padding: 40px;
+        text-align: center;
 
-  <section id="feedback-app">
-    <h2>Feedback App</h2>
-    <p class="vision">
-      A Feedback App célja, hogy átláthatóvá és hatékonyabbá tegye a diákok és mentorok közti visszajelzési folyamatot.  
-      A platform támogatja a tananyagok kezelését, a kompetenciafejlesztést és a sprint célok követését.
-    </p>
-    <ul class="features">
-      <li>📘 Diákok kezelése</li>
-      <li>👨‍🏫 Mentor visszajelzések</li>
-      <li>📅 Modulbeosztás és naptár</li>
-      <li>💪 Kompetenciák követése</li>
-      <li>🎯 Sprint célok megjelenítése</li>
-    </ul>
-  </section>
+    }
 
-  <section id="sprint">
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 160px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        margin: 10px;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+
+    .card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+        background-image: url('arrow.png'); /* Cseréld le a nyíl ikonra */
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .arrow.right {
+        top: 50%;
+        left: calc(100% + 10px);
+        transform: translateY(-50%);
+    }
+
+    .arrow.left {
+        top: 50%;
+        right: calc(100% + 10px);
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .arrow.down {
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+    .modules {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+    }
+
+</style>
+<body>
+<h2> Feedback App moduljai</h2>
+<div class="layout">
+    <div class="card">
+        <img src="feedback-icon.png" alt="Feedback App">
+        <div>Feedback app</div>
+        <div class="arrow left"></div>
+        <div class="arrow right"></div>
+        <div class="arrow down"></div>
+    </div>
+</div>
+
+<div class="row">
+<div class="card">
+    <img src="student-icon.png" alt="Diákok">
+    <div>Diákok</div>
+</div>
+
+<div class="card">
+    <img src="mentor-icon.png" alt="Mentor">
+    <div>Mentor</div>
+</div>
+</div>
+
+<div class="modules">
+    <div class="card">
+        <img src="login-icon.png" alt="Belépés">
+        <div>Belépés</div>
+    </div>
+
+    <div class="card">
+        <img src="calendar-icon.png" alt="Modulbeosztás - Naptár">
+        <div>Modulbeosztás – Naptár</div>
+    </div>
+
+    <div class="card">
+        <img src="kanban-icon.png" alt="Tananyagok - TanKanban">
+        <div>Tananyagok – TanKanban</div>
+    </div>
+
+    <div class="card">
+        <img src="competency-icon.png" alt="Kompetenciák">
+        <div>Kompetenciák</div>
+    </div>
+</div>
+
+</body>
+</section>
+
+
+<section id="sprint">
     <h2>Sprint célok és story pontok</h2>
     <table>
-      <thead>
+        <thead>
         <tr>
-          <th>Feladat</th>
-          <th>Story pont</th>
-          <th>Becsült idő (óra)</th>
+            <th>Feladat</th>
+            <th>Story pont</th>
+            <th>Becsült idő (óra)</th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <tr>
-          <td>Tananyagfeltöltés modul fejlesztése</td>
-          <td contenteditable="true">8</td>
-          <td contenteditable="true">12</td>
+            <td>Tananyagfeltöltés modul fejlesztése</td>
+            <td contenteditable="true">8</td>
+            <td contenteditable="true">12</td>
         </tr>
         <tr>
-          <td>Felhasználói jogosultságok kezelése</td>
-          <td contenteditable="true">5</td>
-          <td contenteditable="true">8</td>
+            <td>Felhasználói jogosultságok kezelése</td>
+            <td contenteditable="true">5</td>
+            <td contenteditable="true">8</td>
         </tr>
-      </tbody>
+        </tbody>
     </table>
-  </section>
+</section>
 
-  <section id="tech">
+<section id="tech">
     <h2>Használt technológiák</h2>
-    <div class="tech-list">
-      <span>⚙️ Java</span>
-      <span>🐘 PostgreSQL</span>
-      <span>🌐 Spring Boot</span>
-      <span>💻 React</span>
-      <span>☁️ Cloudinary</span>
-      <span>🧠 OpenAI API</span>
-    </div>
-  </section>
+    <img src="tech.png" alt="Használt technológiák" class="logo">
+</section>
 
-  <section id="link">
-    <h2>Próbáld ki az alkalmazást</h2>
-    <a href="https://backtothefeatures.progmasters.hu" target="_blank" class="demo-link">
-      👉 backtothefeatures.progmasters.hu
-    </a>
-  </section>
+<section id="link">
+   <h1>
+       <a href="https://backtothefeatures.progmasters.hu">
+           <img src="logo.png" alt="BackToTheFeatures logó" class="logo">
+       </a>
 
-  <script src="script.js"></script>
+
+   </h1>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
